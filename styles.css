@@ -1,0 +1,106 @@
+.hero {
+
+}
+
+.titleText{
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.6em; /* Increase font size */
+    padding: 15px 20px; /* Adjust padding */
+    margin: 0 5px; /* Adjust margin */
+    font-weight: 500;
+    color: rgb(236, 252, 172);
+}
+
+
+
+/* Set background image */
+body {
+  background-image: url('./Media/bg_tile_dark.png');
+  background-repeat: repeat-y;
+  background-size: cover;
+  font-size: 1.2rem;
+  color: ivory;
+}
+
+
+.navbar {
+  /* height: 15vh; */
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* @media (min-width: 768px) {
+    .navbar {
+      width: 95%;
+      margin-left: 2.5%;
+      margin-right: 10%;
+    }
+} */
+
+/* Background image */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 65vh; /* Half the height of the viewport */
+    object-fit: cover;
+    filter: brightness(0.4);
+    background-size: cover;
+    z-index: -1; /* Place behind other content */
+  }
+
+.person-photo {
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 80%; /* Limit the width of the image */
+    padding: 10px; /* Add white margin around the image */
+    background-color:#000000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
+    
+  }
+  
+.person-description {
+    padding: 20px; /* Add padding to the description */
+  }
+
+.custom-icon {
+    max-width: 10%; /* Ensure image does not exceed its parent's width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+.content-BoxGCU{
+  background-image: url('./Media/bg_tile_light_4.png');
+  background-repeat: repeat-y;
+  background-size: cover;
+  /* background-color: #c7c7c7; */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 90%; /* Limit the width of the image */
+  padding: 10px; /* Add white margin around the image */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
+}
+
+.galleryPhoto{
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 90%; /* Limit the width of the image */
+    padding: 10px; /* Add white margin around the image */
+    background-color:#e7e7e7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
+}
+
+
+
+.hidden {
+  opacity:0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1; 
+  filter: blur(0);
+  transform: translateX(0); 
+}
