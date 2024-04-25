@@ -1,0 +1,69 @@
+<style>
+    .imageUI_Infographics1 {
+        src: "./Media/Infographics/UI_1.png";
+        width: 150px;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .row-overlap {
+        position: relative;
+        margin-top: -50px;
+        /* Adjust this value to control the amount of overlap */
+    }
+</style>
+
+
+<div class="container-fluid content-BoxGCU p-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-6">
+            <img id="image" class="imageUI_Infographics1" src="./Media/Infographics/i_1_OFF.png" alt="Original Image">
+        </div>
+    </div>
+    <div class="row row-overlap">
+        <div class="col-2"></div>
+        <div class="col-4">
+            <img id="image2" class="imageUI_Infographics1" src="./Media/Infographics/i_2_OFF.png" alt="Original Image">
+        </div>
+    </div>
+    <div class="row row-overlap">
+        <div class="col-6"></div>
+        <div class="col-4">
+            <img id="image3" class="imageUI_Infographics1" src="./Media/Infographics/i_3_OFF.png" alt="Original Image">
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    const image = document.getElementById('image');
+    const image2 = document.getElementById('image2');
+    const image3 = document.getElementById('image3');
+    const imagesON = ["./Media/Infographics/i_1_ON.png","./Media/Infographics/i_2_ON.png","./Media/Infographics/i_3_ON.png"]
+    const imagesOFF = ["./Media/Infographics/i_1_OFF.png","./Media/Infographics/i_2_OFF.png","./Media/Infographics/i_3_OFF.png"]
+    const links = ["./Contact.html","./Gallery.html","./footer.html"]
+    const images = [image, image2, image3];
+
+    const textBlock = document.getElementById('text-block');
+
+
+    for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener('mouseenter', function () {
+            this.src = imagesON[i];
+        });
+
+        images[i].addEventListener('mouseleave', function () {
+            this.src = imagesOFF[i];
+        });
+
+        images[i].addEventListener('click', function () {
+            window.open(links[i]); // Opens the URL in a new tab
+        });
+    }
+
+</script>

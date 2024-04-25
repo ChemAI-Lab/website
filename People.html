@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>People</title>
+</head>
+
+<body>
+    <!-- Your website content goes here -->
+    <div class="background-image"
+        style="background-image: url('https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=3793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+    </div>
+    <div id="initContent"></div>
+    <script>
+        $(function () {
+            // Load the template.html file
+            $('#initContent').load('template.html');
+        });
+
+
+    </script>
+
+    <!-- Custom content in this page -->
+
+    <div style="padding-top: 75vh;"></div>
+    
+    <section class="container mb-5 hidden content-BoxGCU">
+        <div class="row align-items-center">
+            <div class="col-md-6 person-description">
+                <h2>WHO WE ARE</h2>
+                <hr>
+
+            </div>
+            <div class="col-md-6">
+                <img src="./Media/chemai_anim2.gif" class="img-fluid" alt="">
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section class="container mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-12 person-description">
+                <div class="infographic-icon"></div>
+
+            </div>
+        </div>
+
+    </section> -->
+
+
+
+    <!-- FOOTER -->
+    <div id="footerJQ"></div>
+    <script>
+        $("#footerJQ").load("footer.html");
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script defer src="app.js"></script>
+</body>
+
+</html>

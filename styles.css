@@ -2,9 +2,9 @@
 
 }
 
-.titleText{
+/* .titleText{
     text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .navbar-nav .nav-link {
     font-size: 1.6em; /* Increase font size */
@@ -26,12 +26,7 @@ body {
 }
 
 
-.navbar {
-  /* height: 15vh; */
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
+
 /* @media (min-width: 768px) {
     .navbar {
       width: 95%;
@@ -43,12 +38,12 @@ body {
 /* Background image */
 .background-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    /* top: 0px;
+    left: 0px; */
     height: 65vh; /* Half the height of the viewport */
+    width: 100%;
     object-fit: cover;
-    filter: brightness(0.4);
+    filter: brightness(0.6);
     background-size: cover;
     z-index: -1; /* Place behind other content */
   }
@@ -77,7 +72,7 @@ body {
   background-size: cover;
   /* background-color: #c7c7c7; */
   margin: 0 auto; /* Center the image horizontally */
-  max-width: 90%; /* Limit the width of the image */
+  max-width: 95%; /* Limit the width of the image */
   padding: 10px; /* Add white margin around the image */
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
 }
@@ -104,3 +99,5 @@ body {
   filter: blur(0);
   transform: translateX(0); 
 }
+
+
