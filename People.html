@@ -6,8 +6,6 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <style>
-        
-
         .country {
             fill: #5b6871;
             stroke: #8899a6;
@@ -21,7 +19,7 @@
         }
 
         .country-Color:hover {
-            fill: #65c960;
+            fill: #4ad043;
         }
 
         #mapPosition {
@@ -34,68 +32,70 @@
 
 <body>
 
+    <!-- ############### Insert NAVBAR with jQuery ############## -->
+    <div id="navbarJQ"></div>
 
-    <!-- Your website content goes here -->
-    <div class="background-image"
-        style="background-image: url('https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=3793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-    </div>
-    <div id="initContent"></div>
-    <script>
-        $(function () {
-            // Load the template.html file
-            $('#initContent').load('template.html');
-        });
-
-
-    </script>
-
-    <!-- Custom content in this page -->
-
-    <!-- <div style="padding-top: 75vh;"></div> -->
-
-
+    <!-- ############### Map section ############## -->
     <section class="container-fluid mb-5 hidden content-BoxGCU">
         <div class="row align-items-center p-3">
-            <div class="col-md-8 p-2" style="height: 65vh; background-image: url('./Media/bg_map.png'); background-size: cover; background-position: center;">
+            <div class="col-md-8 p-2"
+                style="height: 65vh; background-image: url('./Media/bg_map.png'); background-size: cover; background-position: center;">
                 <div id="mapPosition"></div>
-
             </div>
 
-            <div class="col-md-3 content-BoxGCU" >
+            <div class="col-md-3 content-BoxGCU">
                 <div class="p-3 rounded shadow" style="background: #5b6871;">
                     <h2>OUR STUDENTS AND COLLABORATORS</h2>
                     <hr>
                 </div>
             </div>
         </div>
-
     </section>
 
-    <!-- PERSON PROFILE HTML BLOCK: COPY TO ADD STUDENTS -->
-    <section class="container mb-5 content-BoxGCU">
+    <!-- ############### Detailed People text sections ############## -->
+    <!-- MAIN SECTION: LAB PROFFESSOR AND STAFF -->
+    <section class="container mb-5 content-BoxGCU" style="background: #303639;">
         <div class="row align-items-center">
+            <div class="col p-4" style="text-align: center;">
+                <h1 class="customh1 content-BoxGCU">Staff</h1>
+            </div>
+        </div>
+        <!-- STAFF 1 -->
+        <div class="row align-items-center mb-5 content-BoxGCU gradStudentStyle">
             <div class="col-md-8 person-description">
                 <h2>Dr. Rodrigo A. Vargaz-Hernández (MEXICO)</h2>
                 <hr>
-                
             </div>
             <div class="col-md-4">
                 <img src="./Media/profile_anim.gif" class="img-fluid" alt="">
             </div>
         </div>
+        
 
     </section>
 
-    <!-- PERSON PROFILE HTML BLOCK: COPY TO ADD STUDENTS -->
-    <section class="container mb-5 content-BoxGCU">
+    <!-- MAIN SECTION: GRAD STUDENTS -->
+    <section class="container mb-5 content-BoxGCU" style="background: #485155;">
         <div class="row align-items-center">
+            <div class="col p-4" style="text-align: center;">
+                <h1 class="customh1 content-BoxGCU">Graduate Students</h1>
+            </div>
+        </div>
+        <!-- GRAD STUDENT 1 -->
+        <div class="row align-items-center mb-5 content-BoxGCU gradStudentStyle">
             <div class="col-md-8 person-description">
-                <h2>Dr. Rodrigo A. Vargaz-Hernández (BRAZIL)</h2>
+                <h2>Dr. Rodrigo A. Vargaz-Hernández (MEXICO)</h2>
                 <hr>
-                <p>
-                    lorem*20
-                </p>
-                
+            </div>
+            <div class="col-md-4">
+                <img src="./Media/profile_anim.gif" class="img-fluid" alt="">
+            </div>
+        </div>
+        <!-- GRAD STUDENT 2 -->
+        <div class="row align-items-center mb-5 content-BoxGCU gradStudentStyle">
+            <div class="col-md-8 person-description">
+                <h2>Dr. Rodrigo A. Vargaz-Hernández (MEXICO)</h2>
+                <hr>
             </div>
             <div class="col-md-4">
                 <img src="./Media/profile_anim.gif" class="img-fluid" alt="">
@@ -104,30 +104,45 @@
 
     </section>
 
-    
+    <!-- MAIN SECTION: UNDERGRAD STUDENTS -->
+    <section class="container mb-5 content-BoxGCU" style="background: #485155;">
+        <div class="row align-items-center">
+            <div class="col p-4" style="text-align: center;">
+                <h1 class="customh1 content-BoxGCU">Undergraduate Students</h1>
+            </div>
+        </div>
+        <!-- STUDENT 1 -->
+        <div class="row align-items-center mb-5 content-BoxGCU undergradStyle ">
+            <div class="col-md-8 person-description">
+                <h2>Dr. Rodrigo A. Vargaz-Hernández (MEXICO)</h2>
+                <hr>
+            </div>
+            <div class="col-md-4">
+                <img src="./Media/profile_anim.gif" class="img-fluid" alt="">
+            </div>
+        </div>
+        <!-- STUDENT 2 -->
+        <div class="row align-items-center mb-5 content-BoxGCU undergradStyle">
+            <div class="col-md-8 person-description">
+                <h2>Dr. Rodrigo A. Vargaz-Hernández (MEXICO)</h2>
+                <hr>
+            </div>
+            <div class="col-md-4">
+                <img src="./Media/profile_anim.gif" class="img-fluid" alt="">
+            </div>
+        </div>
 
-    <!-- FOOTER -->
+    </section>
+
+
+    <!-- ############### FOOTER ############## -->
     <div id="footerJQ"></div>
+
+    <!-- ################ SCRIPTS ################################### -->
     <script>
+        $("#navbarJQ").load("navbar.html");
         $("#footerJQ").load("footer.html");
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script defer src="app.js"></script>
     <script src="appMap.js"></script>
 </body>
 
