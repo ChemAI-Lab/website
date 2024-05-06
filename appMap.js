@@ -41,17 +41,18 @@ fetch("https://raw.githubusercontent.com/ChemAI-Group/website/main/metadataMap.t
 //     "Australia",
 //     ""
 // ];
-
+const svg = d3.select('#mapPosition').append('svg')
+    .attr('height', '100%').attr('width', '100%');
 // ########################## CODE ##############################################
 
 
 // Apply the topological data
 function updateMapWithCountries(countriesList) {
+    console.log("Hell0");
     // In the body of the html, add an svg component with the dimensions width,height
     // const svg = d3.select('#mapPosition').append('svg')
     //     .attr('height', height).attr('width', width);
-    const svg = d3.select('#mapPosition').append('svg')
-        .attr('height', '100%').attr('width', '100%');
+
 
     // Specify the type of projection for the map.
     // const projection = d3.geoMercator().scale(120).translate([width / 2, height / 1.4]);
@@ -60,12 +61,6 @@ function updateMapWithCountries(countriesList) {
 
     // Add a new group within the svg
     const g = svg.append("g");
-    const minZoom = 1;
-    const maxZoom = 10;
-    svg.call(zoom().scaleExtent([minZoom,maxZoom]).on('zoom', (event) => {
-        d3.select('svg g')
-            .attr('transform', event.transform);
-    }))
 
     // data = d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json')
     data = d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
@@ -91,3 +86,13 @@ function updateMapWithCountries(countriesList) {
 }
 
 
+const minZoom = 1;
+const maxZoom = 10;
+
+svg.call(zoom().scaleExtent([minZoom, maxZoom]).on('zoom', (event) => {
+    const currentZoom = event.transform.k;
+    d3.select('svg g').attr('transform', event.transform);
+
+}
+
+))
