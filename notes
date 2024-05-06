@@ -1,0 +1,5 @@
+Para colorear un nuevo pais,
+agragar el nombre del pais en metadataMap.txt
+
+# para activar locar server y ver cambios loacles
+nodemon server 
