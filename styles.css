@@ -125,6 +125,12 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.customh1_External{
+  color: #f9ea76;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 .customlink {
   color: #FFD5B0;
   text-decoration: none;
@@ -133,4 +139,35 @@ body {
 .customlink:hover {
   color: #b58c68;
   text-decoration: none;
+}
+
+.studentSocialMediaLogo{
+  width: 80%;
+  height: auto;
+}
+
+.content-BoxGCUExternal{
+  /* background-image: url('./Media/bg_tile_light_4.png'); */
+  background-color: #4d5b69;
+  background-repeat: repeat-y;
+  background-size: cover;
+  /* background-color: #c7c7c7; */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 95%; /* Limit the width of the image */
+  padding: 10px; /* Add white margin around the image */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
+}
+
+
+.content-BoxGCUResearch{
+  /* background-image: url('./Media/bg_tile_light_4.png'); */
+  background-color: #46505d;
+  background-repeat: repeat-y;
+  background-size: cover;
+  /* background-color: #c7c7c7; */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 95%; /* Limit the width of the image */
+  padding: 10px; /* Add white margin around the image */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
+  /* border-radius: 30px; */
 }

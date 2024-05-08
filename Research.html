@@ -3,54 +3,98 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
     <title>Research</title>
 </head>
 
 <body>
-    <!-- Your website content goes here -->
-    <div class="background-image"
-        style="background-image: url('https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=3793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-    </div>
-    <div id="initContent"></div>
-    <script>
-        $(function () {
-            // Load the template.html file
-            $('#initContent').load('template.html');
-        });
+
+    <!-- ############### Insert NAVBAR with jQuery ############## -->
+    <div id="navbarJQ"></div>
+
+    <div style="padding-top: 10vh;"></div>
+    <!-- ############### SECTION 1 ############## -->
+    <section class="container mb-1 content-BoxGCUResearch p-3 " style="background: #2b353e7f;">
+        <div class="row content-BoxGCUResearch" style="border-radius: 20px;">
+            <!-- TOPIC 1 -->
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <h3 class="customh1_External">Theoretical chemistry</h3>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi omnis
+                    magnam doloremque temporibus fugiat earum expedita maxime sit quisquam veritatis soluta nostrum qui
+                    velit consectetur impedit esse laborum, iusto molestiae.
+                    Cumque assumenda, aliquam quas voluptatum quis cum incidunt, commodi itaque labore repudiandae aut
+                    atque sint quia aspernatur placeat possimus modi id nisi accusamus? Quos eveniet perferendis
+                    consequatur quasi natus. Quisquam.
+                </div>
+            </div>
+        </div>
 
 
-    </script>
+    </section>
+    <!-- ############### SECTION 2 ############## -->
+    <section class="container mb-1 content-BoxGCUResearch p-3 " style="background: #2b353e7f;">
+        <div class="row content-BoxGCUResearch" style="border-radius: 20px;">
+            <!-- TOPIC 1 -->
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <h3 class="customh1_External">Potential Energy Sources (PES)</h3>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi omnis
+                    magnam doloremque temporibus fugiat earum expedita maxime sit quisquam veritatis soluta nostrum qui
+                    velit consectetur impedit esse laborum, iusto molestiae.
+                    Cumque assumenda, aliquam quas voluptatum quis cum incidunt, commodi itaque labore repudiandae aut
+                    atque sint quia aspernatur placeat possimus modi id nisi accusamus? Quos eveniet perferendis
+                    consequatur quasi natus. Quisquam.
+                </div>
+            </div>
+        </div>
 
-    <!-- Custom content in this page -->
 
-    <div style="padding-top: 75vh;"></div>
-    
-    <section class="container mb-5 hidden content-BoxGCU">
+    </section>
+    <!-- ############### SECTION 3 ############## -->
+    <section class="container mb-1 content-BoxGCUResearch p-3 " style="background: #2b353e7f;">
+        <div class="row content-BoxGCUResearch" style="border-radius: 20px;">
+            <!-- TOPIC 1 -->
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <h3 class="customh1_External">Materials</h3>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi omnis
+                    magnam doloremque temporibus fugiat earum expedita maxime sit quisquam veritatis soluta nostrum qui
+                    velit consectetur impedit esse laborum, iusto molestiae.
+                    Cumque assumenda, aliquam quas voluptatum quis cum incidunt, commodi itaque labore repudiandae aut
+                    atque sint quia aspernatur placeat possimus modi id nisi accusamus? Quos eveniet perferendis
+                    consequatur quasi natus. Quisquam.
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
 
 
-    <!-- FOOTER -->
+    <!-- ############### FOOTER ############## -->
     <div id="footerJQ"></div>
+
+    <!-- ################ SCRIPTS ################################### -->
     <script>
+        $("#navbarJQ").load("navbar.html");
         $("#footerJQ").load("footer.html");
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script defer src="app.js"></script>
+    <script src="appMap.js"></script>
 </body>
 
 </html>

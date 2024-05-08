@@ -48,7 +48,6 @@ const svg = d3.select('#mapPosition').append('svg')
 
 // Apply the topological data
 function updateMapWithCountries(countriesList) {
-    console.log("Hell0");
     // In the body of the html, add an svg component with the dimensions width,height
     // const svg = d3.select('#mapPosition').append('svg')
     //     .attr('height', height).attr('width', width);
@@ -56,7 +55,7 @@ function updateMapWithCountries(countriesList) {
 
     // Specify the type of projection for the map.
     // const projection = d3.geoMercator().scale(120).translate([width / 2, height / 1.4]);
-    const projection = d3.geoMercator().scale(120);
+    const projection = d3.geoMercator().scale(150);
     const path = d3.geoPath(projection)
 
     // Add a new group within the svg

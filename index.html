@@ -3,6 +3,7 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     <title>Home</title>
 </head>
 
@@ -17,9 +18,13 @@
                 <h2>Welcome to our research group's webpage!</h2>
                 <hr>
                 <p>
-                    Our primary focus is on harnessing the power of machine learning to enhance and innovate computational chemistry simulations. 
-                    We leverage advanced algorithms and data-driven approaches to unravel complex chemical behaviors and predict material properties with unprecedented accuracy. 
-                    Our interdisciplinary team is dedicated to pushing the boundaries of computational science, developing tools that facilitate deeper understanding of chemical and quantum processes and material interactions at the molecular level. 
+                    Our primary focus is on harnessing the power of machine learning to enhance and innovate
+                    computational chemistry simulations.
+                    We leverage advanced algorithms and data-driven approaches to unravel complex chemical behaviors and
+                    predict material properties with unprecedented accuracy.
+                    Our interdisciplinary team is dedicated to pushing the boundaries of computational science,
+                    developing tools that facilitate deeper understanding of chemical and quantum processes and material
+                    interactions at the molecular level.
                 </p>
                 <hr>
 
@@ -31,9 +36,11 @@
         </div>
 
     </section>
-    
+
     <!-- ############### Bubble Infographics ############## -->
-    <div id="infJQ"></div>
+    <section>
+        <div id="canvas-container" style="height: 80vh; width: 100vw;"></div>
+    </section>
     <!-- ############### Reading FOOTER with jQuery ############## -->
     <div id="footerJQ"></div>
 
@@ -44,6 +51,7 @@
         $("#infJQ").load("Infographics_1.html");
         $("#footerJQ").load("footer.html");
     </script>
+    <script defer src="molecules.js"></script>
 
 </body>
 
