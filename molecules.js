@@ -10,6 +10,8 @@ let bgbubbles = [];
 let meta_images_ON = ["./Media/Infographics/i_1_ON.png", "./Media/Infographics/i_2_ON.png", "./Media/Infographics/i_3_ON.png", "./Media/Infographics/i_4_ON.png"];
 let meta_images_OFF = ["./Media/Infographics/i_1_OFF.png", "./Media/Infographics/i_2_OFF.png", "./Media/Infographics/i_3_OFF.png", "./Media/Infographics/i_4_OFF.png"];
 const links = ["./Contact.html", "./Gallery.html", "./footer.html", "./Contact.html"]
+const bgParticlePATH = "./Media/Infographics/background_particle.png"
+let bgParticle;
 
 let images_ON = [];
 let images_OFF = [];
@@ -24,6 +26,9 @@ function preload() {
         images_ON[i] = loadImage(meta_images_ON[i]);
         images_OFF[i] = loadImage(meta_images_OFF[i]);
     }
+    bgParticle = loadImage(bgParticlePATH);
+
+
 }
 
 function setup() {
@@ -50,11 +55,11 @@ function setup() {
 
         // let r = random(60, 80);
         let startSize = i + 1
-        let r = random(i, i * 1.5);
-        let imgID = int(random(0, images_ON.length));
+        let r = random(i, i + 1) * 0.5;
+        // let imgID = int(random(0, images_ON.length));
         // console.log(imgID);
         // let kitten = random(kittens);
-        let b = new BG_Bubble(x, y, r, imgID);
+        let b = new BG_Bubble(x, y, r);
         bgbubbles.push(b);
     }
     imageMode(CENTER)
@@ -88,8 +93,8 @@ class BG_Bubble {
         this.x = x;
         this.y = y;
         this.r = r;
-        this.myIDX = myIDX;
-        this.img = images_OFF[this.myIDX];
+        // this.myIDX = myIDX;
+        this.img = bgParticle;
         this.t = random(0, 10);
         this.scaleResize = 10; //how much bigger/smaller will the circle get
         this.rescaledRadius = this.r;
@@ -97,15 +102,28 @@ class BG_Bubble {
         // this.kitten = random(kittens);
     }
     show() {
-        tint(255, 100);
+        // tint(255, 100);
         image(this.img, this.x, this.y, this.rescaledRadius, this.rescaledRadius);
-        noTint(); 
+        // noTint(); 
     }
 
     move() {
-        // calculate the distance to the 
-        this.x = this.x + random(-0.5, 0.5);
-        this.y = this.y + random(-0.5, 0.5);
+        // calculate the distance to the bubble relative to the mouse position
+        let dX = mouseX - this.x;
+        let dY = mouseY - this.y;
+        // let dst = createVector(dX, dY).normalize();
+        if (Math.sqrt(dX * dX + dY * dY) < 300) {
+            // this.x += dst.x * 0.9;
+            // this.y += dst.y * 0.9;
+            this.x = this.x + random(-5, 5);
+            this.y = this.y + random(-5, 5);
+        } else {
+            this.x = this.x + random(-0.7, 0.7);
+            this.y = this.y + random(-0.7, 0.7);
+        }
+
+
+
     }
 }
 
@@ -164,7 +182,7 @@ class Bubble {
 
     show() {
         image(this.img, this.x, this.y, this.rescaledRadius, this.rescaledRadius);
-        
+
     }
 }
 
