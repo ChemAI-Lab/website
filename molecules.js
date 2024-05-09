@@ -4,6 +4,7 @@ let containerHeight = document.getElementById('canvas-container').offsetHeight;
 
 // Collection of bubbles
 let bubbles = [];
+let bgbubbles = [];
 
 // 
 let meta_images_ON = ["./Media/Infographics/i_1_ON.png", "./Media/Infographics/i_2_ON.png", "./Media/Infographics/i_3_ON.png", "./Media/Infographics/i_4_ON.png"];
@@ -41,6 +42,21 @@ function setup() {
         let b = new Bubble(x, y, r, imgID);
         bubbles.push(b);
     }
+
+    // generate and push simple background bubbles
+    for (let i = 0; i < 50; i++) {
+        let x = random(0, containerWidth);
+        let y = random(0, containerHeight);
+
+        // let r = random(60, 80);
+        let startSize = i + 1
+        let r = random(i, i * 1.5);
+        let imgID = int(random(0, images_ON.length));
+        // console.log(imgID);
+        // let kitten = random(kittens);
+        let b = new BG_Bubble(x, y, r, imgID);
+        bgbubbles.push(b);
+    }
     imageMode(CENTER)
 }
 
@@ -52,6 +68,10 @@ function mousePressed() {
 
 function draw() {
     background(7, 13, 16);
+    for (let i = 0; i < bgbubbles.length; i++) {
+        bgbubbles[i].move();
+        bgbubbles[i].show();
+    }
     for (let i = 0; i < bubbles.length; i++) {
         bubbles[i].move();
         bubbles[i].updateSize();
@@ -63,6 +83,32 @@ function draw() {
     }
 }
 
+class BG_Bubble {
+    constructor(x, y, r, myIDX) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.myIDX = myIDX;
+        this.img = images_OFF[this.myIDX];
+        this.t = random(0, 10);
+        this.scaleResize = 10; //how much bigger/smaller will the circle get
+        this.rescaledRadius = this.r;
+        this.speedSin = 0.015;
+        // this.kitten = random(kittens);
+    }
+    show() {
+        tint(255, 100);
+        image(this.img, this.x, this.y, this.rescaledRadius, this.rescaledRadius);
+        noTint(); 
+    }
+
+    move() {
+        // calculate the distance to the 
+        this.x = this.x + random(-0.5, 0.5);
+        this.y = this.y + random(-0.5, 0.5);
+    }
+}
+
 class Bubble {
     constructor(x, y, r, myIDX) {
         this.x = x;
@@ -70,7 +116,7 @@ class Bubble {
         this.r = r;
         this.myIDX = myIDX;
         this.img = images_OFF[this.myIDX];
-        this.t = random(0,10);
+        this.t = random(0, 10);
         this.scaleResize = 10; //how much bigger/smaller will the circle get
         this.rescaledRadius = this.r;
         this.speedSin = 0.015;
@@ -81,10 +127,10 @@ class Bubble {
         //let d = dist(px, py, this.x, this.y);
         //if (d < this.r) {
         if (
-            px > this.x - this.r/2 &&
-            px < this.x + this.r/2 &&
-            py > this.y - this.r/2 &&
-            py < this.y + this.r/2
+            px > this.x - this.r / 2 &&
+            px < this.x + this.r / 2 &&
+            py > this.y - this.r / 2 &&
+            py < this.y + this.r / 2
         ) {
             this.img = images_ON[this.myIDX]; //random(kittens);
         } else {
@@ -96,10 +142,10 @@ class Bubble {
         //let d = dist(px, py, this.x, this.y);
         //if (d < this.r) {
         if (
-            px > this.x - this.r/2 &&
-            px < this.x + this.r/2 &&
-            py > this.y - this.r/2 &&
-            py < this.y + this.r/2
+            px > this.x - this.r / 2 &&
+            px < this.x + this.r / 2 &&
+            py > this.y - this.r / 2 &&
+            py < this.y + this.r / 2
         ) {
             event.preventDefault();
             window.location.href = links[this.myIDX]; // Opens the URL in a new tab
@@ -111,13 +157,14 @@ class Bubble {
         this.y = this.y + random(-0.5, 0.5);
     }
 
-    updateSize(){
+    updateSize() {
         this.rescaledRadius = this.r + (Math.sin(this.t) * this.scaleResize);
         this.t += this.speedSin;
     }
 
     show() {
         image(this.img, this.x, this.y, this.rescaledRadius, this.rescaledRadius);
+        
     }
 }
 
