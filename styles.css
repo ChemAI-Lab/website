@@ -59,7 +59,7 @@ body {
 
 .person-photo {
     margin: 0 auto; /* Center the image horizontally */
-    max-width: 80%; /* Limit the width of the image */
+    max-width: 100%; /* Limit the width of the image */
     padding: 10px; /* Add white margin around the image */
     background-color:#000000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
@@ -142,8 +142,9 @@ body {
 }
 
 .studentSocialMediaLogo{
-  width: 80%;
+  width: 12%;
   height: auto;
+  padding: 5px;
 }
 
 .content-BoxGCUExternal{
