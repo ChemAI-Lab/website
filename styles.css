@@ -65,6 +65,15 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
     
   }
+
+.people-photo {
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 80%; /* Limit the width of the image */
+    padding: 10px; /* Add white margin around the image */
+    background-color:#4c575b;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
+    
+  }
   
 .person-description {
     padding: 20px; /* Add padding to the description */

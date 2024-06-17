@@ -49,13 +49,13 @@ function setup() {
     }
 
     // generate and push simple background bubbles
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 120; i++) {
         let x = random(0, containerWidth);
         let y = random(0, containerHeight);
 
         // let r = random(60, 80);
         let startSize = i + 1
-        let r = random(i, i + 1) * 0.5;
+        let r = random(i, i + 1) * 0.2;
         // let imgID = int(random(0, images_ON.length));
         // console.log(imgID);
         // let kitten = random(kittens);
@@ -72,7 +72,7 @@ function mousePressed() {
 }
 
 function draw() {
-    background(7, 13, 16);
+    background(7, 20, 16);
     for (let i = 0; i < bgbubbles.length; i++) {
         bgbubbles[i].move();
         bgbubbles[i].show();
@@ -111,12 +111,13 @@ class BG_Bubble {
         // calculate the distance to the bubble relative to the mouse position
         let dX = mouseX - this.x;
         let dY = mouseY - this.y;
+        let h = Math.sqrt(dX * dX + dY * dY);
         // let dst = createVector(dX, dY).normalize();
-        if (Math.sqrt(dX * dX + dY * dY) < 300) {
+        if (h < 500) {
             // this.x += dst.x * 0.9;
             // this.y += dst.y * 0.9;
-            this.x = this.x + random(-5, 5);
-            this.y = this.y + random(-5, 5);
+            this.x = this.x + random(-5, 5) * ((500-h)*0.005);
+            this.y = this.y + random(-5, 5) * ((500-h)*0.005);
         } else {
             this.x = this.x + random(-0.7, 0.7);
             this.y = this.y + random(-0.7, 0.7);
