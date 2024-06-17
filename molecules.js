@@ -9,7 +9,7 @@ let bgbubbles = [];
 // 
 let meta_images_ON = ["./Media/Infographics/i_1_ON.png", "./Media/Infographics/i_2_ON.png", "./Media/Infographics/i_3_ON.png", "./Media/Infographics/i_4_ON.png"];
 let meta_images_OFF = ["./Media/Infographics/i_1_OFF.png", "./Media/Infographics/i_2_OFF.png", "./Media/Infographics/i_3_OFF.png", "./Media/Infographics/i_4_OFF.png"];
-const links = ["./Contact.html", "./Gallery.html", "./footer.html", "./Contact.html"]
+const links = ["./Research.html", "./People.html", "./External.html", "./Contact.html"]
 const bgParticlePATH = "./Media/Infographics/background_particle.png"
 let bgParticle;
 
