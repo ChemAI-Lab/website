@@ -172,3 +172,10 @@ body {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4); /* Add shadow to the margin */
   /* border-radius: 30px; */
 }
+
+
+.btn-custom {
+  color: #fff;
+  background-color: #4d5b69;
+  border-color: rgb(181, 124, 89);
+}

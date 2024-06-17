@@ -84,7 +84,32 @@
 
     </section>
 
+    <section class="container mb-1 content-BoxGCUResearch p-3 " style="background: #2b353e7f;">
+        <div class="row ">
+            <!-- collapsed content -->
+            <div class="col">
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="btn btn-custom " type="button" data-toggle="collapse" data-target="#PUBSECT_1"
+                        aria-expanded="false" aria-controls="PUBSECT_1">
+                        <span class="customh1_External">More</span>
+                        
+                    </button>
+                </div>
+                <div class="collapse collapse-content" id="PUBSECT_1">
+                    <div class="card card-body" style="background-color: rgb(0, 4, 0);">
+                        <!-- CONTENT of collapsed section goes here -->
+                        <div class="row p-3 mb-5 align-items-center">
+                            <div class="col">
+                                <div id="pubSummary"></div>
+                            </div>
+                        </div>
 
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ############### FOOTER ############## -->
     <div id="footerJQ"></div>
@@ -93,6 +118,7 @@
     <script>
         $("#navbarJQ").load("navbar.html");
         $("#footerJQ").load("footer.html");
+        $("#pubSummary").load("publicationsSummary.html")
     </script>
     <script src="appMap.js"></script>
 </body>
