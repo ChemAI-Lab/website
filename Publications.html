@@ -14,6 +14,113 @@
     <!-- ############### PUBLICATIONS Section ############## -->
     <!-- MAIN SECTION -->
     <section class="container m-5 pt-3 pb-3 content-BoxGCU" style="background: #3b494f;">
+        <!-- New paper -->
+        <div class="row align-items-center mb-5 content-BoxGCU undergradStyle hidden">
+            <div class="col-md-7">
+                <div class="row">
+                    <h3 class="customh1"> Binary Optimization of Measurement Groupings for Quantum Energy Estimation
+                    </h3>
+                    <div class="col d-flex justify-content-end">
+                        <h4>Isaac L. Huidobro-Meezs, Rodrigo A. Vargas-Hernández (2026)</h4>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row">
+                    Repeated measurements can dominate the resources required for quantum
+                    energy estimation, making the choice of which Pauli observables to
+                    measure together a central optimization problem for variational
+                    quantum algorithms. We formulate fully commuting measurement grouping
+                    as a classical binary optimization problem based on clique selection
+                    and construct non-overlapping groups using mixed-integer linear
+                    programming (MILP). For a benchmark of molecular Hamiltonians,
+                    groupings optimized with approximate covariances reduce the non-
+                    overlapping measurement requirement ε²M by 51.8% on
+                    average relative to sorted insertion (SI). Using the MILP groups to
+                    initialize iterative coefficient splitting (ICS), denoted MILP-ICS,
+                    yields an average 24.3% reduction relative to ICS initialized from
+                    SI (SI-ICS). The optimized groups also transfer across nearby
+                    molecular geometries while preserving substantial measurement savings.
+                    We further introduce O-clique, which directly optimizes overlapping
+                    commuting supports through candidate-clique selection and coefficient
+                    profiles. Although O-clique provides only modest additional reductions
+                    beyond MILP-ICS, it reduces the measurement requirement by 27.3% on
+                    average relative to SI-ICS with 100 iterations, despite using only
+                    five final coefficient refinement iterations, indicating improved
+                    support quality. Finally, we extend the comparison to Fermi–Hubbard,
+                    Kitaev–Heisenberg–Γ, and XYZ lattice Hamiltonians, where
+                    MILP-based groupings substantially outperform the corresponding SI-
+                    based strategies. Together, these results show that variance-informed
+                    optimization of measurement-group structure can substantially reduce
+                    sampling costs across molecular and lattice Hamiltonians, with
+                    optimized non-overlapping groups providing strong, transferable
+                    initializations and direct overlapping optimization offering further
+                    gains.
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-3 content-BoxGCU d-flex justify-content-center">
+                        <a href="https://arxiv.org/abs/2610.10339" class="customlink">arXiv</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 text-center">
+                <img src="./Media/Papers_Thumbnails/milp-grouping.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <!-- New paper -->
+        <div class="row align-items-center mb-5 content-BoxGCU undergradStyle hidden">
+            <div class="col-md-7">
+                <div class="row">
+                    <h3 class="customh1"> Experimental Validation of Universal Machine Learning Interatomic Potentials for Lithium-Ion Dynamics in Solid Electrolytes via 7Li NMR
+                    </h3>
+                    <div class="col d-flex justify-content-end">
+                        <h4>Cameron A. Gurwell, Taiana L. E. Pereira, Mengyang Cui, Carlos A. Martins Junior, Gillian R. Goward, and Rodrigo A. Vargas-Hernández (2026)</h4>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row">
+                    A significant step toward electrification is the adoption of more
+                    sustainable energy storage technologies such as batteries. Safer
+                    alternatives to conventional solution-state lithium-ion batteries
+                    (LIBs) are solid-state batteries, which employ solid-state
+                    electrolytes (SSEs). These SSEs can exhibit lithium conductivities
+                    comparable to those of liquid electrolytes but are often discovered
+                    through experimental trial and error. Computational pipelines powered
+                    by universal machine-learning interatomic potentials (uMLIPs) offer a
+                    cheaper and scalable route to screen large datasets of candidate SSEs.
+                    This recent class of models enables rapid materials exploration
+                    compared to traditional quantum chemistry methods and ab initio
+                    molecular dynamics (AIMD). In this work, we assess the current
+                    capabilities of uMLIPs for solid-state lithium battery applications by
+                    systematically benchmarking their predictions against experimental
+                    solid-state nuclear magnetic resonance (ssNMR) diffusion data and
+                    density functional theory (DFT) calculations. We considered twelve
+                    different Li-based compounds, five ordered electrolytes, three
+                    disordered electrolytes, and four cathodes. This study includes
+                    eighteen different uMLIPs categorized into four main families, CHGNet,
+                    M3GNet, MACE, and ORB. Our results demonstrate that model performance
+                    is strongly dependent on both the underlying architecture and the
+                    chemical system under investigation. MACE- and ORB-based models
+                    consistently achieve higher accuracy across structural, energetic, and
+                    diffusion-related properties. However, the reliability of lithium
+                    diffusion predictions remains system-dependent, highlighting current
+                    limitations in the transferability of uMLIPs for complex materials.
+                    These findings provide a critical assessment of the readiness of
+                    uMLIPs for integration into computational pipelines aimed at
+                    accelerating the discovery of next-generation solid-state battery
+                    materials.
+                </div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-3 content-BoxGCU d-flex justify-content-center">
+                        <a href="https://doi.org/10.26434/chemrxiv.15002480/v1" class="customlink">ChemRxiv</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 text-center">
+                <img src="./Media/Papers_Thumbnails/umlip-li-nmr.png" class="img-fluid" alt="">
+            </div>
+        </div>
         <!-- Paper 1 -->
         <div class="row align-items-center mb-5 content-BoxGCU undergradStyle hidden">
             <div class="col-md-7">
